@@ -1,3 +1,6 @@
-taskList = list(range(1,11))
-resList = [x*x for x in taskList]
-print(resList)
+
+def e_squares(start, end):
+    tasklist = list(range(start, end))
+    reslist = [x * x for x in tasklist]
+    return reslist
+print(e_squares(1,11))
