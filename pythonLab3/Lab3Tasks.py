@@ -1,6 +1,7 @@
+class SquareGenerator:
+    def e_squares(start, end):
+        tasklist = list(range(start, end))
+        reslist = [x * x for x in tasklist]
+        return reslist
 
-def e_squares(start, end):
-    tasklist = list(range(start, end))
-    reslist = [x * x for x in tasklist]
-    return reslist
-print(e_squares(1,11))
+print(SquareGenerator.e_squares(1,11))
