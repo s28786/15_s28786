@@ -1,15 +1,17 @@
-class SquareGenerator:
+from abc import ABC, abstractmethod
+
+class SquareGenerator(ABC):
+    @abstractmethod
     def e_squares(self, start, end):
-        if end < start:
-            print("Error: End of range is less than start.")
-            return []
-        return [x * x for x in (range(start, end+1))]
+        pass
+
+
 
 class CubicGenerator(SquareGenerator):
     def e_squares(self, start, end):
-        if start > end:
+        if end < start:
             raise ValueError("Start of range cannot be greater than end.")
-        return super().e_squares(start, end)
+        return [x * x for x in (range(start, end+1))]
     def e_cubes(self, start, end):
         if end < start:
             print("Error: End of range is less than start.")
